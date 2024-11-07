@@ -1,0 +1,7 @@
+{
+  "name": "accident_reporting",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
