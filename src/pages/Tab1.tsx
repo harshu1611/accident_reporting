@@ -20,21 +20,25 @@ const LoginPage: React.FC = () => {
 
   return (
     <IonPage >
-      <IonContent className="flex items-center justify-center h-full bg-gray-100 ">
+      <div className="flex items-center justify-center h-screen bg-gray-100 ">
         <div className="w-full  p-8 space-y-6 bg-white rounded-lg shadow-md max-w-screen-lg">
           <h2 className="text-2xl font-bold text-center text-gray-800">
             Login
           </h2>
 
-          <div className="space-y-4 text-black">
+          <div className="space-y-4 flex-col text-black">
             <div className="flex flex-col">
+              <div className="flex flex-row items-center space-x-2">
               <IonLabel className="text-gray-600">Email</IonLabel>
-              <div className="relative">
-                <IonIcon
+              <IonIcon
                   icon={mailOutline}
-                  className="absolute top-2 left-2 text-gray-400"
+                  className=" top-2 left-2 text-gray-400"
                 />
-                <IonInput
+              </div>
+              
+              <div className="flex flex-row">
+               
+              <IonInput
                   type="email"
                   value={email}
                   onIonChange={(e) => setEmail(e.detail.value!)}
@@ -43,15 +47,18 @@ const LoginPage: React.FC = () => {
                 />
               </div>
             </div>
-
             <div className="flex flex-col">
+              <div className="flex flex-row items-center space-x-2">
               <IonLabel className="text-gray-600">Password</IonLabel>
-              <div className="relative">
-                <IonIcon
+              <IonIcon
                   icon={lockClosedOutline}
-                  className="absolute top-2 left-2 text-gray-400"
+                  className=" top-2 left-2 text-gray-400"
                 />
-                <IonInput
+              </div>
+              
+              <div className="flex flex-row">
+               
+              <IonInput
                   type="password"
                   value={password}
                   onIonChange={(e) => setPassword(e.detail.value!)}
@@ -60,6 +67,7 @@ const LoginPage: React.FC = () => {
                 />
               </div>
             </div>
+            
 
             <IonButton
               expand="block"
@@ -77,7 +85,7 @@ const LoginPage: React.FC = () => {
             </p>
           </div>
         </div>
-      </IonContent>
+      </div>
     </IonPage>
   );
 };
