@@ -19,6 +19,7 @@ import Tab3 from "./pages/Tab3";
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
 import GetInsurance from "./pages/GetInsurance";
+import Home from "./pages/Home";
 
 /* Basic CSS for apps built with Ionic */
 // import "@ionic/react/css/normalize.css";
@@ -67,6 +68,9 @@ const App: React.FC = () => (
             <Redirect to="/tab1" />
           </Route>
           <Route exact path="/getInsurance" component={GetInsurance}>
+          {/* <GetInsurance/> */}
+          </Route>
+          <Route exact path="/home" component={Home}>
           {/* <GetInsurance/> */}
           </Route>
         </IonRouterOutlet>

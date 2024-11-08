@@ -68,7 +68,7 @@ export default function GetInsurance() {
           <h2 className='text-black font-bold mb-2'>Insurance Details</h2>
           <div className='flex items-center mb-3'>
             <img
-              src="https://via.placeholder.com/100" // Placeholder image for insurance provider
+              src="/images/Kotak Mahindra Car Insurance.png" // Placeholder image for insurance provider
               alt="Insurance Provider Logo"
               className='h-20 w-20 mr-4 rounded-md'
             />
