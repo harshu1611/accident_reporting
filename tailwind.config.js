@@ -4,7 +4,11 @@ module.exports = {
     "./src/**/*.{html,ts,tsx}", // includes HTML, TypeScript, and TSX files
   ],
   theme: {
-    extend: {},
+    extend: {
+     fontFamily:{
+      faculty:["Faculty"]
+     } 
+    },
   },
   plugins: [],
 };

@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: "Faculty";
+    src: url("../public/fonts/FacultyGlyphic-Regular.ttf");
+  }
