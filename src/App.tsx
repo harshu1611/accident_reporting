@@ -21,6 +21,7 @@ import "@ionic/react/css/core.css";
 import GetInsurance from "./pages/GetInsurance";
 import Home from "./pages/Home";
 
+
 /* Basic CSS for apps built with Ionic */
 // import "@ionic/react/css/normalize.css";
 // import "@ionic/react/css/structure.css";
@@ -58,7 +59,7 @@ const App: React.FC = () => (
           <Route exact path="/tab1">
             <LoginPage />
           </Route>
-          <Route exact path="/tab2">
+          <Route exact path="/addInsurance">
             <Tab2 />
           </Route>
           <Route path="/tab3">

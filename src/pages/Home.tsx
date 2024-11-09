@@ -1,25 +1,15 @@
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonIcon, IonInput } from '@ionic/react';
 import React from 'react';
 import { searchOutline, locationOutline, notificationsOutline } from 'ionicons/icons';
+import { useIonRouter } from '@ionic/react';
+import Header from '../components/Header';
 
 export default function Home() {
+  const router=useIonRouter()
   return (
     <IonPage className='font-faculty'>
       {/* Header */}
-      <IonHeader>
-        <IonToolbar color="light">
-          <div className="flex justify-between items-center px-4 py-3">
-            <div className="flex items-center">
-              <IonIcon icon={locationOutline} className="text-2xl text-gray-800 mr-3" />
-              <div className="flex flex-col">
-                <span className="text-sm font-bold text-gray-900">San Francisco, CA</span>
-                <span className="text-xs text-gray-500">Alemany Blvd, San Francisco, CA 94112, USA</span>
-              </div>
-            </div>
-            <IonIcon icon={notificationsOutline} className="text-2xl text-gray-800" />
-          </div>
-        </IonToolbar>
-      </IonHeader>
+      <Header goBack={false} title={"Home"}/>
 
       {/* Content */}
       <IonContent className="ion-padding font-faculty">
@@ -94,7 +84,9 @@ export default function Home() {
           <h3 className="text-xl font-bold text-gray-800 mb-4">Manage Your Insurance</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
             {['Add Insurance Details', 'View Policies', 'Renew Policy', 'Claim History'].map((management) => (
-              <div key={management} className="flex flex-col items-center p-4 border rounded-lg shadow-md bg-green-50 hover:bg-green-100 transition-all">
+              <div key={management} className="flex flex-col items-center p-4 border rounded-lg shadow-md bg-green-50 hover:bg-green-100 transition-all" onClick={()=>{
+                    router.push("/addInsurance","forward","push")
+              }}>
                 <img src="https://via.placeholder.com/50" alt={management} className="mb-3" />
                 <span className="text-sm text-center font-semibold text-green-700">{management}</span>
               </div>

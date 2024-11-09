@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { useIonRouter } from '@ionic/react';
 import { useState } from 'react';
 import { Rings } from 'react-loader-spinner'
+import Header from '../components/Header';
 
 const Tab2: React.FC = () => {
 
@@ -31,6 +32,7 @@ const Tab2: React.FC = () => {
 
   return (
     <IonPage>
+      <Header goBack={true} title={"Add Insurance"}/>
       <div className='flex bg-white h-screen flex-col p-3 font-faculty space-y-3'>
         {loading?
           <div className='justify-center items-center flex h-screen'>
