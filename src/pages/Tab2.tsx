@@ -33,7 +33,7 @@ const Tab2: React.FC = () => {
   return (
     <IonPage>
       <Header goBack={true} title={"Add Insurance"}/>
-      <div className='flex bg-white h-screen flex-col p-3 font-faculty space-y-3'>
+      <div className='flex bg-white h-screen flex-col p-3 font-faculty space-y-3 justify-center'>
         {loading?
           <div className='justify-center items-center flex h-screen'>
             

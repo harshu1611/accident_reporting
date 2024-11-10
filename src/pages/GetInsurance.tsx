@@ -1,12 +1,14 @@
 import { IonPage } from '@ionic/react';
 import React from 'react';
 import { useIonRouter } from '@ionic/react';
+import Header from '../components/Header';
 
 export default function GetInsurance() {
   const router = useIonRouter();
 
   return (
-    <IonPage className='bg-white p-3'>
+    <IonPage className='bg-white'>
+      <Header goBack={true} title={"Insurance Details"}/>
       <div className='flex flex-col font-faculty overflow-scroll'>
         {/* Title */}
         <h1 className='text-black text-center text-xl underline'>Insurance Details</h1>

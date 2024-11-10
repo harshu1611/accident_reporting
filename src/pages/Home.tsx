@@ -1,20 +1,37 @@
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonIcon, IonInput } from '@ionic/react';
 import React from 'react';
-import { searchOutline, locationOutline, notificationsOutline } from 'ionicons/icons';
+import { searchOutline, locationOutline, notificationsOutline, alertCircleOutline } from 'ionicons/icons';
 import { useIonRouter } from '@ionic/react';
 import Header from '../components/Header';
+import { accRepAss, EmergencySituation, manageInsurace, ourServices } from '../data/insProvider';
 
 export default function Home() {
-  const router=useIonRouter()
+  const router = useIonRouter();
   return (
     <IonPage className='font-faculty'>
       {/* Header */}
-      <Header goBack={false} title={"Home"}/>
+      <Header goBack={false} title={"Home"} />
+
+      {/* SOS Button */}
+      
+        {/* <IonButton color="danger" shape="round" className="flex items-center space-x-2 p-4 ">
+          <IonIcon icon={alertCircleOutline} className="text-white text-2xl" />
+          <span className="text-white font-bold text-lg">SOS</span>
+        </IonButton> */}
+      
 
       {/* Content */}
+      
       <IonContent className="ion-padding font-faculty">
+        <div className='flex w-full justify-center'>
+        <button className='bg-red-600 rounded-lg w-fit p-2 text-white flex mt-5'>
+        SOS
+      </button>
+        </div>
+   
         {/* Search Bar */}
-        <div className="my-5">
+
+        <div className="mt-5">
           <div className="flex items-center border-2 border-gray-300 rounded-full px-4 py-2">
             <IonIcon icon={searchOutline} className="text-2xl text-gray-500 mr-2" />
             <IonInput placeholder="Search here" className="text-base text-gray-700" />
@@ -37,10 +54,10 @@ export default function Home() {
             <IonButton fill="clear" color="primary" size="small">See all</IonButton>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
-            {['Report Accident', 'Insurance Claim', 'Medical Assistance', 'Roadside Assistance', 'Accident Report Assistance', 'Insurance Details'].map((service) => (
-              <div key={service} className="flex flex-col items-center p-4 border rounded-lg shadow-md bg-white hover:bg-gray-50 transition-all">
-                <img src="https://via.placeholder.com/50" alt={service} className="mb-3" />
-                <span className="text-sm text-center font-semibold text-gray-800">{service}</span>
+            {ourServices.map((service) => (
+              <div className="flex flex-col items-center p-4 border rounded-lg shadow-md bg-white hover:bg-gray-50 transition-all">
+                <img src={service.image}  className="mb-3" />
+                <span className="text-sm text-center font-semibold text-gray-800">{service.name}</span>
               </div>
             ))}
           </div>
@@ -57,10 +74,10 @@ export default function Home() {
         <div className="my-6">
           <h3 className="text-xl font-bold text-gray-800 mb-4">Accident Reporting & Assistance</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
-            {['Real-Time Claim', 'Accident Report Assistance', 'AI Report Generator', 'Live Location Updates'].map((feature) => (
-              <div key={feature} className="flex flex-col items-center p-4 border rounded-lg shadow-md bg-blue-50 hover:bg-blue-100 transition-all">
-                <img src="https://via.placeholder.com/50" alt={feature} className="mb-3" />
-                <span className="text-sm text-center font-semibold text-blue-800">{feature}</span>
+            {accRepAss.map((feature) => (
+              <div key={feature.name} className="flex flex-col items-center p-4 border rounded-lg shadow-md bg-blue-50 hover:bg-blue-100 transition-all">
+                <img src={feature.image} alt={feature.name} className="mb-3" />
+                <span className="text-sm text-center font-semibold text-blue-800">{feature.name}</span>
               </div>
             ))}
           </div>
@@ -70,10 +87,10 @@ export default function Home() {
         <div className="my-6">
           <h3 className="text-xl font-bold text-gray-800 mb-4">Emergency Situation</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {['I had an accident', 'I need medical help', 'Request Tow Service'].map((situation) => (
-              <div key={situation} className="flex flex-col items-center p-4 border rounded-lg bg-red-50 shadow-md hover:bg-red-100 transition-all">
-                <img src="https://via.placeholder.com/50" alt={situation} className="mb-3" />
-                <span className="text-sm text-center font-semibold text-red-700">{situation}</span>
+            {EmergencySituation.map((situation) => (
+              <div key={situation.name} className="flex flex-col items-center p-4 border rounded-lg bg-red-50 shadow-md hover:bg-red-100 transition-all">
+                <img src={situation.image} alt={situation.name} className="mb-3 h-32 w-32" />
+                <span className="text-sm text-center font-semibold text-red-700">{situation.name}</span>
               </div>
             ))}
           </div>
@@ -83,12 +100,12 @@ export default function Home() {
         <div className="my-6">
           <h3 className="text-xl font-bold text-gray-800 mb-4">Manage Your Insurance</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
-            {['Add Insurance Details', 'View Policies', 'Renew Policy', 'Claim History'].map((management) => (
-              <div key={management} className="flex flex-col items-center p-4 border rounded-lg shadow-md bg-green-50 hover:bg-green-100 transition-all" onClick={()=>{
-                    router.push("/addInsurance","forward","push")
+            {manageInsurace.map((management) => (
+              <div key={management.name} className="flex flex-col items-center p-4 border rounded-lg shadow-md bg-green-50 hover:bg-green-100 transition-all" onClick={() => {
+                router.push("/addInsurance", "forward", "push");
               }}>
-                <img src="https://via.placeholder.com/50" alt={management} className="mb-3" />
-                <span className="text-sm text-center font-semibold text-green-700">{management}</span>
+                <img src={management.image} alt={management.name} className="mb-3" />
+                <span className="text-sm text-center font-semibold text-green-700">{management.name}</span>
               </div>
             ))}
           </div>
