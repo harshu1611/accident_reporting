@@ -13,8 +13,8 @@ export default function Header({
 }) {
   const router=useIonRouter()
   return (
-    <IonHeader translucent={true} className="bg-white font-faculty">
-      <div className="flex flex-row justify-between items-center text-black w-full p-2 font-bold">
+    <IonHeader translucent={true} className="bg-white font-faculty rounded-b-xl border-b-4 border-blue-500">
+      <div className="flex flex-row justify-between items-center text-black w-full p-2 font-bold rounded-xl">
         {/* <div className=''></div> */}
         {goBack ? (
           <IonIcon icon={arrowBack} color="blue" size="primary" onClick={()=>{

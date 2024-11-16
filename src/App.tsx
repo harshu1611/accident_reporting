@@ -20,6 +20,15 @@ import Tab3 from "./pages/Tab3";
 import "@ionic/react/css/core.css";
 import GetInsurance from "./pages/GetInsurance";
 import Home from "./pages/Home";
+import SOS1 from "./pages/SOS1";
+import SOS2 from "./pages/SOS2";
+import SOS3 from "./pages/SOS3";
+import SOS4 from "./pages/SOS4";
+import SOS5 from "./pages/SOS5";
+import SOS6 from "./pages/SOS6";
+import ClaimHistory from "./pages/ClaimHistory";
+import ViewPolicies from "./pages/ViewPolicies";
+import AIReport from "./pages/AIReport";
 
 
 /* Basic CSS for apps built with Ionic */
@@ -74,6 +83,22 @@ const App: React.FC = () => (
           <Route exact path="/home" component={Home}>
           {/* <GetInsurance/> */}
           </Route>
+          <Route exact path="/sos1" component={SOS1}></Route>
+          <Route exact path="/sos2" component={SOS2}></Route>
+          <Route exact path="/sos3" component={SOS3}></Route>
+          <Route exact path="/sos4" component={SOS4}></Route>
+          <Route exact path="/sos5" component={SOS5}></Route>
+          <Route exact path="/sos6" component={SOS6}></Route>
+          <Route exact path="/history" component={ClaimHistory}></Route>
+          <Route exact path="/policies" component={ViewPolicies}></Route>
+          <Route exact path="/aireport" component={AIReport}></Route>
+
+
+
+
+
+
+
         </IonRouterOutlet>
        
      

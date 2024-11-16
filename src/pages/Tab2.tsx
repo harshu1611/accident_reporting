@@ -33,7 +33,9 @@ const Tab2: React.FC = () => {
   return (
     <IonPage>
       <Header goBack={true} title={"Add Insurance"}/>
-      <div className='flex bg-white h-screen flex-col p-3 font-faculty space-y-3 justify-center'>
+      <div className='flex bg-white h-screen flex-col p-3 font-faculty space-y-3 justify-center items-center'>
+      <img src="/logo.png" className="h-32 w-32 "></img>
+
         {loading?
           <div className='justify-center items-center flex h-screen'>
             
@@ -46,7 +48,7 @@ const Tab2: React.FC = () => {
       />
           </div>
        :
-      <>
+     <>
        <h1 className='text-black text-xl font-bold'>Register Your Existing Insurance</h1>
         <Select
           options={options}
@@ -64,7 +66,7 @@ const Tab2: React.FC = () => {
         </button>
         
        
-        <h1 className='text-blue-500 underline text-sm text-center'>But New Insurance</h1>
+        <h1 className='text-blue-500 underline text-sm text-center'>Buy New Insurance</h1>
       </>
       }
        

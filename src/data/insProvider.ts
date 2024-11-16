@@ -81,7 +81,7 @@ export const accRepAss=[
         image:"/images/live-location-update.png"
     },{
         name:"AI Legal Advisor",
-        image:""
+        image:"/images/AIReport.png"
     }
 ]
 
@@ -118,3 +118,17 @@ export const manageInsurace=[
         image:"/images/claim-history.png"
     }
 ]
+
+export const addedPolicies=[{
+     name:"Bajaj Allianz Car Insurance",
+        logo: "/images/Bajaj Allianz Car Insurance.png",
+    policy:"BA/45843545",
+    vehicle:"Volkswagon Taigun"
+}]
+
+export const registeredClaims=[{
+    carImage:"/images/car.jpg",
+    carModel:"VW Taigun 2024",
+    claimNumber:"CL1567",
+    policyNumber:"KMB6732"
+}]
