@@ -1,6 +1,7 @@
 # Volkswagen i.Mobilothon 4.0 - Accident Reporting & Assistance Application
 
-![Volkswagen i.Mobilothon 4.0 Banner](https://via.placeholder.com/800x400)
+![image](https://github.com/user-attachments/assets/d7805510-c8e4-4f8e-a043-ed4db3fd8462)
+
 
 ## Team: The Cosmos
 
@@ -29,18 +30,12 @@ We used a combination of cutting-edge technologies to build our application:
 - **SQL**: Database management for storing user data and claims.
 
 ### Screenshots
-![](https://github.com/user-attachments/assets/0660b680-5230-44f1-9484-38e3b28fe088)
-
-![](https://github.com/user-attachments/assets/0380d22e-1fa9-4ad9-b2e2-ab65b2309378)
-
-![WhatsApp Image 2024-11-17 at 22 42 43_7f71a375](https://github.com/user-attachments/assets/b8fb18a0-8273-4a13-a69c-1f66f847115b)
-
-![WhatsApp Image 2024-11-17 at 22 42 40_eb6e8ec7](https://github.com/user-attachments/assets/5d86f87a-3fc8-4971-88c8-d3f21722cf71)
-
-
-
-
-
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+  <img src="https://github.com/user-attachments/assets/0660b680-5230-44f1-9484-38e3b28fe088" alt="Screenshot 1" width="300px" height="auto" />
+  <img src="https://github.com/user-attachments/assets/0380d22e-1fa9-4ad9-b2e2-ab65b2309378" alt="Screenshot 2" width="300px" height="auto" />
+  <img src="https://github.com/user-attachments/assets/b8fb18a0-8273-4a13-a69c-1f66f847115b" alt="Screenshot 3" width="300px" height="auto" />
+  <img src="https://github.com/user-attachments/assets/5d86f87a-3fc8-4971-88c8-d3f21722cf71" alt="Screenshot 4" width="300px" height="auto" />
+</div>
 
 ---
 
